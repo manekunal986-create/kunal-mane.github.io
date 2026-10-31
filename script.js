@@ -172,3 +172,48 @@ if (copyEmailBtn) {
 }<script src="script.js"></script>
 </body>
 </html>
+// Resume Voice Assistant
+
+function startResumeAssistant() {
+
+    if (!("speechSynthesis" in window)) {
+        document.getElementById("assistantMessage").textContent =
+            "Your browser does not support voice playback.";
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const introduction =
+        "Welcome to Kunal Mane's portfolio. " +
+        "Kunal is an Electronics and Telecommunication Engineering graduate " +
+        "from Savitribai Phule Pune University. " +
+        "He has an interest in electronics, embedded systems, " +
+        "Internet of Things, software development and data analytics. " +
+        "He has completed internships in PCB designing and Power BI " +
+        "and cloud computing. Thank you for visiting his portfolio.";
+
+    const speech = new SpeechSynthesisUtterance(introduction);
+
+    speech.lang = "en-IN";
+    speech.rate = 0.9;
+
+    document.getElementById("assistantMessage").textContent =
+        "Playing Kunal's introduction...";
+
+    speech.onend = function () {
+        document.getElementById("assistantMessage").textContent =
+            "Thank you for listening!";
+    };
+
+    window.speechSynthesis.speak(speech);
+}
+
+
+function stopResumeAssistant() {
+
+    window.speechSynthesis.cancel();
+
+    document.getElementById("assistantMessage").textContent =
+        "Introduction stopped. Click Start Introduction to listen again.";
+}
