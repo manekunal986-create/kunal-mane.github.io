@@ -1,219 +1,155 @@
 // =====================================
-// RESUME VOICE ASSISTANT
+// MOBILE NAVIGATION
 // =====================================
 
-const resumeText = `
-Hello and welcome!
-My name is Kunal Mane.
-I am an Electronics and Telecommunication Engineering graduate.
-I am interested in software development, embedded systems,
-Internet of Things, and data analytics.
-My technical interests include HTML, CSS, Java, Python,
-SQL, Power BI, and embedded technologies.
-Thank you for visiting my portfolio.
-`;
+document.addEventListener("DOMContentLoaded", function () {
 
-const speakButton = document.getElementById("speakButton");
-const resumeSpeakButton = document.getElementById("speakResume");
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
 
-function speakResume() {
-    if (!("speechSynthesis" in window)) {
-        alert("Your browser does not support speech.");
-        return;
-    }
-
-    window.speechSynthesis.cancel();
-
-    const speech = new SpeechSynthesisUtterance(resumeText);
-    speech.lang = "en-IN";
-    speech.rate = 0.9;
-
-    window.speechSynthesis.speak(speech);
-}
-
-if (speakButton) {
-    speakButton.addEventListener("click", speakResume);
-}
-
-if (resumeSpeakButton) {
-    resumeSpeakButton.addEventListener("click", speakResume);
-}
-
-
-// =====================================
-// PROJECT DETAILS
-// =====================================
-
-const projectDetails = {
-    security: {
-        title: "AI & IoT-Based Security System",
-        description: "An academic project exploring security monitoring using embedded hardware and IoT technologies.",
-        technologies: "Arduino, ESP32, IoT",
-        status: "Academic Project"
-    },
-
-    portfolio: {
-        title: "Interactive Developer Portfolio",
-        description: "A responsive personal website featuring technical skills, project cards, and a voice introduction.",
-        technologies: "HTML, CSS, JavaScript",
-        status: "Currently Building"
-    },
-
-    analytics: {
-        title: "Sales Intelligence Dashboard",
-        description: "A planned dashboard to visualize sales trends, revenue, and product performance.",
-        technologies: "Power BI, SQL, Excel",
-        status: "Planned Project"
-    }
-};
-
-document.querySelectorAll(".project-btn").forEach(function(button) {
-    button.addEventListener("click", function() {
-
-        const project = projectDetails[button.dataset.project];
-
-        if (!project) return;
-
-        const popup = document.createElement("div");
-        popup.className = "project-popup";
-
-        popup.innerHTML = `
-            <div class="project-popup-content">
-                <button class="popup-close" type="button">&times;</button>
-                <p class="popup-label">PROJECT DETAILS</p>
-                <h2></h2>
-                <p class="popup-description"></p>
-                <p class="popup-tech"></p>
-                <p class="popup-status"></p>
-            </div>
-        `;
-
-        popup.querySelector("h2").textContent = project.title;
-        popup.querySelector(".popup-description").textContent = project.description;
-        popup.querySelector(".popup-tech").textContent =
-            "Technologies: " + project.technologies;
-        popup.querySelector(".popup-status").textContent =
-            "Status: " + project.status;
-
-        document.body.appendChild(popup);
-
-        const closeButton = popup.querySelector(".popup-close");
-
-        closeButton.addEventListener("click", function() {
-            popup.remove();
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
         });
 
-        popup.addEventListener("click", function(event) {
-            if (event.target === popup) {
-                popup.remove();
+        navMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navMenu.classList.remove("active");
+            });
+        });
+    }
+
+    // =====================================
+    // COPY EMAIL BUTTON
+    // =====================================
+
+    const copyEmailBtn = document.getElementById("copyEmailBtn");
+    const copyStatus = document.getElementById("copyStatus");
+
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener("click", async function () {
+            const email = "kunalmane946@gmail.com";
+
+            try {
+                await navigator.clipboard.writeText(email);
+
+                if (copyStatus) {
+                    copyStatus.textContent = "Email copied successfully!";
+                }
+            } catch (error) {
+                if (copyStatus) {
+                    copyStatus.textContent =
+                        "Please copy the email manually: " + email;
+                }
             }
         });
-    });
+    }
+
+    // =====================================
+    // VOICE ASSISTANT BUTTON
+    // =====================================
+
+    const speakButton = document.getElementById("speakButton");
+
+    if (speakButton) {
+        speakButton.addEventListener("click", startResumeAssistant);
+    }
+
 });
 
 
 // =====================================
-// SKILLS SECTION
+// RESUME VOICE ASSISTANT
 // =====================================
-
-document.querySelectorAll(".skill-card").forEach(function(card) {
-
-    const button = card.querySelector(".skill-more");
-    const progress = card.querySelector(".skill-progress-fill");
-
-    if (progress) {
-        progress.style.setProperty(
-            "--skill-width",
-            progress.dataset.width || "0%"
-        );
-    }
-
-    if (button) {
-        button.addEventListener("click", function() {
-
-            const expanded =
-                button.getAttribute("aria-expanded") === "true";
-
-            button.setAttribute("aria-expanded", String(!expanded));
-
-            button.textContent = expanded
-                ? "Explore Skills +"
-                : "Show Less −";
-
-            card.classList.toggle("is-expanded", !expanded);
-        });
-    }
-});
-
-
-// =====================================
-// COPY EMAIL BUTTON
-// =====================================
-
-const copyEmailBtn = document.getElementById("copyEmailBtn");
-
-if (copyEmailBtn) {
-
-    copyEmailBtn.addEventListener("click", async function() {
-
-        const email = "kunalmane946@gmail.com";
-
-        try {
-            await navigator.clipboard.writeText(email);
-            copyEmailBtn.textContent = "Email Copied ✓";
-        } catch (error) {
-            window.prompt("Copy this email address:", email);
-        }
-
-        setTimeout(function() {
-            copyEmailBtn.textContent = "Copy Email 📋";
-        }, 2000);
-    });
-}<script src="script.js"></script>
-</body>
-</html>
-// Resume Voice Assistant
 
 function startResumeAssistant() {
 
     if (!("speechSynthesis" in window)) {
-        document.getElementById("assistantMessage").textContent =
-            "Your browser does not support voice playback.";
+        alert("Sorry, your browser does not support text-to-speech.");
         return;
     }
 
     window.speechSynthesis.cancel();
 
-    const introduction =
-        "Welcome to Kunal Mane's portfolio. " +
-        "Kunal is an Electronics and Telecommunication Engineering graduate " +
-        "from Savitribai Phule Pune University. " +
-        "He has an interest in electronics, embedded systems, " +
-        "Internet of Things, software development and data analytics. " +
-        "He has completed internships in PCB designing and Power BI " +
-        "and cloud computing. Thank you for visiting his portfolio.";
+    const resumeText = `
+        Hello! Welcome to Kunal Mane's portfolio.
 
-    const speech = new SpeechSynthesisUtterance(introduction);
+        Kunal Mane is an Electronics and Telecommunication Engineering graduate
+        from Savitribai Phule Pune University.
+
+        He completed his Bachelor of Engineering in 2026 with a CGPA of 7.53.
+
+        He completed his diploma from Government Polytechnic Karad.
+
+        His technical skills include Embedded C, C, Python, SQL,
+        HTML, CSS, JavaScript, Power BI, Arduino, ESP32 and IoT.
+
+        He has worked on a final year project titled
+        AI and IoT Based Enemy Tank Detection and Protection System
+        using Raspberry Pi 4B.
+
+        He has also completed internships in PCB Designing,
+        Power BI and Cloud Computing.
+
+        He has an achievement in Microsoft Azure Fundamentals.
+
+        Thank you for visiting Kunal Mane's portfolio.
+        You can contact him through the contact section of this website.
+    `;
+
+    const speech = new SpeechSynthesisUtterance(resumeText);
 
     speech.lang = "en-IN";
     speech.rate = 0.9;
+    speech.pitch = 1;
+    speech.volume = 1;
 
-    document.getElementById("assistantMessage").textContent =
-        "Playing Kunal's introduction...";
+    speech.onstart = function () {
+        updateVoiceStatus("Assistant is speaking...");
+    };
 
     speech.onend = function () {
-        document.getElementById("assistantMessage").textContent =
-            "Thank you for listening!";
+        updateVoiceStatus("Assistant finished speaking.");
+    };
+
+    speech.onerror = function () {
+        updateVoiceStatus("Voice assistant encountered an error.");
     };
 
     window.speechSynthesis.speak(speech);
 }
 
 
+// =====================================
+// STOP VOICE ASSISTANT
+// =====================================
+
 function stopResumeAssistant() {
 
-    window.speechSynthesis.cancel();
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+        updateVoiceStatus("Voice assistant stopped.");
+    }
 
-    document.getElementById("assistantMessage").textContent =
-        "Introduction stopped. Click Start Introduction to listen again.";
+}
+
+
+// =====================================
+// UPDATE VOICE STATUS
+// =====================================
+
+function updateVoiceStatus(message) {
+
+    const voiceStatus = document.getElementById("voiceStatus");
+
+    if (voiceStatus) {
+        voiceStatus.textContent = message;
+    }
+
+    const assistantMessage = document.getElementById("assistantMessage");
+
+    if (assistantMessage) {
+        assistantMessage.textContent = message;
+    }
+
 }
