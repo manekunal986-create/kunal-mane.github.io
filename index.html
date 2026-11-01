@@ -1,846 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kunal Mane | Engineering Portfolio</title>
+    <title>Kunal Mane | Engineering & Technology Portfolio</title>
 
-    <meta name="description"
-        content="Kunal Mane - Electronics and Telecommunication Engineer interested in software development, embedded systems, IoT and data analytics.">
+    <meta name="description" content="Kunal Mane - Electronics and Telecommunication Engineering graduate interested in software development, embedded systems, IoT and data analytics.">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="navbar">
+<header class="navbar">
+    <a href="#home" class="logo">KM<span>.</span></a>
 
-        <a href="#home" class="logo">KM<span>.</span></a>
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-        <nav id="navMenu">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <a href="#contact" class="nav-button">Let's Connect ↗</a>
 
-        <a href="#contact" class="nav-button">Let's Connect ↗</a>
+    <button class="menu-toggle" id="menuToggle" type="button"
+        aria-label="Toggle navigation">☰</button>
+</header>
 
-        <button class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Toggle navigation">
-            ☰
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="welcome">WELCOME TO MY DIGITAL WORLD</p>
+
+        <h1>Hello, I'm <br><span>Kunal Mane.</span></h1>
+
+        <h2>Electronics Engineer | Software & Data Analytics Enthusiast</h2>
+
+        <p class="description">
+            I am an Electronics and Telecommunication Engineering graduate
+            from Savitribai Phule Pune University. I am interested in
+            software development, embedded systems, IoT, electronics
+            and data analytics.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="primary-button">Explore Projects →</a>
+
+            <button id="speakButton" class="secondary-button" type="button">
+                ▶ Meet Kunal
+            </button>
+
+            <a href="KUNAL_MANE_RESUME" class="primary-button" download>
+                Download Resume ↓
+            </a>
+        </div>
+
+        <p id="voiceStatus" class="voice-status">
+            Click Meet Kunal to hear my introduction.
+        </p>
+    </div>
+
+    <div class="avatar-container">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="avatar">
+            <img src="profile.jpg" alt="Kunal Mane" class="avatar-photo">
+        </div>
+
+        <div class="floating-card card-one">⚡ Embedded Systems</div>
+        <div class="floating-card card-two">🤖 Generative AI</div>
+        <div class="floating-card card-three">📊 Data Analytics</div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="content-section" id="about">
+    <p class="section-label">ABOUT ME</p>
+    <h2>Engineering Meets Innovation</h2>
+
+    <p class="section-description">
+        I am a 2026 Electronics and Telecommunication Engineering graduate
+        from Savitribai Phule Pune University with a CGPA of 7.53.
+        My academic background includes electronics, communication systems,
+        embedded systems and IoT.
+
+        I have also explored PCB designing, Power BI, cloud computing,
+        programming and web development. I enjoy learning new technologies
+        and applying them to practical problems.
+    </p>
+
+    <div class="about-stats">
+        <div class="stat-card">
+            <h3>7.53</h3>
+            <p>Graduation CGPA</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>2026</h3>
+            <p>Engineering Graduate</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>ENTC</h3>
+            <p>Engineering Discipline</p>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="content-section" id="skills">
+    <p class="section-label">WHAT I WORK WITH</p>
+    <h2>Technical Skills</h2>
+
+    <div class="skills-grid">
+
+        <article class="skill-card">
+            <span class="skill-icon">⚡</span>
+            <h3>Electronics & PCB</h3>
+            <p>Electronics fundamentals, PCB design and circuit testing.</p>
+            <div class="skill-tags">
+                <span>Altium</span>
+                <span>Eagle</span>
+                <span>Proteus</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <span class="skill-icon">🔌</span>
+            <h3>Embedded & IoT</h3>
+            <p>Microcontrollers, sensors and connected devices.</p>
+            <div class="skill-tags">
+                <span>Arduino</span>
+                <span>ESP32</span>
+                <span>Embedded C</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <span class="skill-icon">💻</span>
+            <h3>Programming</h3>
+            <p>Programming and application development.</p>
+            <div class="skill-tags">
+                <span>Java</span>
+                <span>Python</span>
+                <span>C</span>
+                <span>C++</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <span class="skill-icon">🌐</span>
+            <h3>Web Development</h3>
+            <p>Building responsive and interactive web interfaces.</p>
+            <div class="skill-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Node.js</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <span class="skill-icon">📊</span>
+            <h3>Data Analytics</h3>
+            <p>Data analysis, reporting and dashboard development.</p>
+            <div class="skill-tags">
+                <span>Power BI</span>
+                <span>Excel</span>
+                <span>SQL</span>
+            </div>
+        </article>
+
+        <article class="skill-card">
+            <span class="skill-icon">☁️</span>
+            <h3>Cloud & AI</h3>
+            <p>Cloud computing fundamentals and AI tools.</p>
+            <div class="skill-tags">
+                <span>Microsoft Azure</span>
+                <span>Generative AI</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="content-section projects" id="projects">
+    <p class="section-label">MY WORK</p>
+    <h2>Featured <span>Projects</span></h2>
+
+    <p class="section-description">
+        Explore my engineering and technology projects.
+        Projects without a published source repository are identified separately.
+    </p>
+
+    <div class="project-grid">
+
+        <article class="project-card">
+            <div class="project-top">
+                <span class="project-icon">🛡️</span>
+                <span class="project-index">01</span>
+            </div>
+
+            <h3>AI & IoT-Based Enemy Tank Detection and Protection System</h3>
+
+            <p>
+                Final-year engineering project using Raspberry Pi 4B,
+                AI concepts and IoT technology for an intelligent
+                detection and protection system.
+            </p>
+
+            <div class="project-tags">
+                <span>Raspberry Pi 4B</span>
+                <span>AI</span>
+                <span>IoT</span>
+            </div>
+
+            <div class="project-footer">
+                <span>Final-Year Project</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-top">
+                <span class="project-icon">🌐</span>
+                <span class="project-index">02</span>
+            </div>
+
+            <h3>Personal Portfolio Website</h3>
+
+            <p>
+                A responsive website presenting my professional profile,
+                skills, education, projects and contact information.
+            </p>
+
+            <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="project-footer">
+                <a href="https://manekunal986-create.github.io/kunal-mane.github.io/"
+                   target="_blank" rel="noopener noreferrer">
+                    Visit Live Website ↗
+                </a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image">
+                <img src="sales_analytics_dashboard_concept.png"
+                     alt="Sales Analytics Dashboard"
+                     style="width:100%;height:180px;object-fit:cover;border-radius:12px;">
+            </div>
+
+            <div class="project-top">
+                <span class="project-icon">📈</span>
+                <span class="project-index">03</span>
+            </div>
+
+            <h3>Sales Analytics Dashboard</h3>
+
+            <p>
+                Dashboard visual concept illustrating sales performance,
+                revenue trends and business metrics.
+            </p>
+
+            <div class="project-tags">
+                <span>Power BI</span>
+                <span>Excel</span>
+                <span>SQL</span>
+            </div>
+
+            <div class="project-footer">
+                <span>Visual Concept</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image">
+                <img src="ecommerce_sales_dashboard.png"
+                     alt="E-commerce Sales Dashboard"
+                     style="width:100%;height:180px;object-fit:cover;border-radius:12px;">
+            </div>
+
+            <div class="project-top">
+                <span class="project-icon">🛒</span>
+                <span class="project-index">04</span>
+            </div>
+
+            <h3>E-commerce Sales Analysis</h3>
+
+            <p>
+                Data analytics project exploring e-commerce sales,
+                profit, product performance and business trends.
+            </p>
+
+            <div class="project-tags">
+                <span>Power BI</span>
+                <span>Data Analytics</span>
+            </div>
+
+            <div class="project-footer">
+                <a href="https://github.com/manekunal986-create/E-Commerce-Sales-Analysis-PowerBI"
+                   target="_blank" rel="noopener noreferrer">
+                    View GitHub Repository ↗
+                </a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image">
+                <img src="student_performance_dashboard.png"
+                     alt="Student Performance Dashboard"
+                     style="width:100%;height:180px;object-fit:cover;border-radius:12px;">
+            </div>
+
+            <div class="project-top">
+                <span class="project-icon">🎓</span>
+                <span class="project-index">05</span>
+            </div>
+
+            <h3>Student Performance Analysis</h3>
+
+            <p>
+                Dashboard visual concept showing student scores,
+                subject-wise performance and class comparisons.
+            </p>
+
+            <div class="project-tags">
+                <span>Data Analysis</span>
+                <span>Visualization</span>
+            </div>
+
+            <div class="project-footer">
+                <span>Visual Concept</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-top">
+                <span class="project-icon">💼</span>
+                <span class="project-index">06</span>
+            </div>
+
+            <h3>Employee Management System</h3>
+
+            <p>
+                Planned application concept for managing employee
+                records, departments and administrative information.
+            </p>
+
+            <div class="project-tags">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>MySQL</span>
+            </div>
+
+            <div class="project-footer">
+                <span>Project Concept</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="content-section" id="education">
+    <p class="section-label">MY ACADEMIC JOURNEY</p>
+    <h2>Education</h2>
+
+    <div class="project-grid">
+
+        <article class="project-card">
+            <span class="project-icon">🎓</span>
+            <h3>Bachelor of Engineering</h3>
+            <p>Electronics and Telecommunication Engineering</p>
+            <p>Savitribai Phule Pune University</p>
+            <div class="project-tags">
+                <span>2026</span>
+                <span>7.53 CGPA</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <span class="project-icon">📘</span>
+            <h3>Diploma</h3>
+            <p>Government Polytechnic Karad</p>
+            <div class="project-tags">
+                <span>80%</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <span class="project-icon">🏫</span>
+            <h3>SSC</h3>
+            <p>Bharatmata English Medium School, Mayani</p>
+            <div class="project-tags">
+                <span>92.80%</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="content-section" id="experience">
+    <p class="section-label">PROFESSIONAL EXPERIENCE</p>
+    <h2>Internship Experience</h2>
+
+    <div class="project-grid">
+
+        <article class="project-card">
+            <span class="project-icon">🔧</span>
+            <h3>PCB Designing Internship</h3>
+            <p>Logistics Pvt. Ltd., Satara</p>
+            <p>
+                45-day internship involving PCB design concepts,
+                electronic circuits and practical exposure to
+                electronics design.
+            </p>
+            <div class="project-tags">
+                <span>PCB Design</span>
+                <span>Electronics</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <span class="project-icon">📊</span>
+            <h3>Power BI & Cloud Computing Internship</h3>
+            <p>January 2025 – February 2025</p>
+            <p>
+                Exposure to dashboard development, data visualization,
+                analysis and Microsoft Azure fundamentals.
+            </p>
+            <div class="project-tags">
+                <span>Power BI</span>
+                <span>Cloud Computing</span>
+                <span>Azure</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="content-section" id="certifications">
+    <p class="section-label">LEARNING & DEVELOPMENT</p>
+    <h2>Certifications & Achievements</h2>
+
+    <div class="project-grid">
+
+        <article class="project-card">
+            <span class="project-icon">☁️</span>
+            <h3>Microsoft Azure Fundamentals</h3>
+            <p>Achievement related to Microsoft Azure fundamentals and cloud computing.</p>
+            <div class="project-tags">
+                <span>Microsoft Azure</span>
+                <span>Cloud</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <span class="project-icon">📡</span>
+            <h3>Technical Research Paper</h3>
+            <p>AI and IoT Based Enemy Tank Detection and Protection System.</p>
+            <div class="project-tags">
+                <span>AI</span>
+                <span>IoT</span>
+                <span>Research</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- PROFILES -->
+<section class="content-section" id="profiles">
+    <p class="section-label">FIND ME ONLINE</p>
+    <h2>Professional Profiles</h2>
+
+    <p class="section-description">
+        Connect with me and explore my work.
+    </p>
+
+    <div class="contact-buttons">
+
+        <a href="https://github.com/manekunal986-create"
+           target="_blank" rel="noopener noreferrer" class="contact-btn">
+            GitHub Profile ↗
+        </a>
+
+        <a href="https://www.linkedin.com/in/kunal-mane-1ba1a9321/"
+           target="_blank" rel="noopener noreferrer" class="contact-btn">
+            LinkedIn Profile ↗
+        </a>
+
+        <a href="KUNAL_MANE_RESUME" download class="contact-btn">
+            Download Resume ↓
+        </a>
+
+    </div>
+</section>
+
+<!-- VOICE ASSISTANT -->
+<section class="content-section" id="resume-assistant">
+    <p class="section-label">INTERACTIVE EXPERIENCE</p>
+    <h2>Meet My Resume Assistant 🤖</h2>
+
+    <p class="section-description">
+        Listen to an introduction about my education, skills and projects.
+    </p>
+
+    <div class="project-card" style="max-width:550px;margin:auto;text-align:center;">
+        <div class="project-icon">🎙️</div>
+        <h3>Resume Voice Assistant</h3>
+
+        <p id="assistantMessage" aria-live="polite">
+            Hello! Click below to hear my introduction.
+        </p>
+
+        <br>
+
+        <button class="primary-button" type="button"
+                onclick="startResumeAssistant()">
+            ▶ Start Introduction
         </button>
 
-    </header>
-
-
-    <main>
-
-        <!-- HERO -->
-        <section class="hero" id="home">
-
-            <div class="hero-content">
-
-                <p class="welcome">WELCOME TO MY DIGITAL WORLD</p>
-
-                <h1>
-                    Hello, I'm <br>
-                    <span>Kunal Mane.</span>
-                </h1>
-
-                <h2>Electronics Engineer | Software & AI Enthusiast</h2>
-
-                <p class="description">
-                    I am an Electronics and Telecommunication Engineering
-                    graduate interested in building practical solutions
-                    using electronics, embedded systems, software development,
-                    Generative AI and data analytics.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#projects" class="primary-button">
-                        Explore Projects →
-                    </a>
-
-                    <button id="speakButton"
-                        class="secondary-button"
-                        type="button">
-                        ▶ Meet Kunal
-                    </button>
-
-                    <a href="KUNAL_MANE_RESUME"
-                        download
-                        class="primary-button">
-                        Download Resume ↗
-                    </a>
-
-                </div>
-
-                <p id="voiceStatus" class="voice-status">
-                    Click Meet Kunal to hear my introduction.
-                </p>
-
-            </div>
-
-
-            <!-- PROFILE PHOTO -->
-            <div class="avatar-container">
-
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-
-                <div class="avatar">
-                    <img src="profile.jpg"
-                        alt="Kunal Mane"
-                        class="avatar-photo">
-                </div>
-
-                <div class="floating-card card-one">
-                    ⚡ Embedded Systems
-                </div>
-
-                <div class="floating-card card-two">
-                    🤖 Generative AI
-                </div>
-
-                <div class="floating-card card-three">
-                    📊 Data Analytics
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ABOUT -->
-        <section class="content-section" id="about">
-
-            <p class="section-label">ABOUT ME</p>
-
-            <h2>Engineering Meets Innovation</h2>
-
-            <p class="section-description">
-                I am a 2026 Electronics and Telecommunication Engineering
-                graduate from Savitribai Phule Pune University. I am interested
-                in technology, innovation and problem-solving.
-
-                My interests include electronics, PCB design, embedded
-                systems, IoT, programming, web development and data analytics.
-                I enjoy learning new technologies and applying them
-                to practical projects.
-            </p>
-
-            <div class="about-stats">
-
-                <div class="stat-card">
-                    <h3>7.53</h3>
-                    <p>Graduation CGPA</p>
-                </div>
-
-                <div class="stat-card">
-                    <h3>2026</h3>
-                    <p>Engineering Graduate</p>
-                </div>
-
-                <div class="stat-card">
-                    <h3>6</h3>
-                    <p>Featured Projects</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SKILLS -->
-        <section class="content-section" id="skills">
-
-            <p class="section-label">WHAT I WORK WITH</p>
-
-            <h2>Technical Skills</h2>
-
-            <div class="skills-grid">
-
-                <article class="skill-card">
-                    <span class="skill-icon">⚡</span>
-                    <h3>Electronics & PCB</h3>
-                    <p>Electronics fundamentals, PCB design and circuit testing.</p>
-
-                    <div class="skill-tags">
-                        <span>Altium</span>
-                        <span>Eagle</span>
-                        <span>Proteus</span>
-                    </div>
-                </article>
-
-
-                <article class="skill-card">
-                    <span class="skill-icon">🔌</span>
-                    <h3>Embedded & IoT</h3>
-                    <p>Microcontrollers, sensors and connected devices.</p>
-
-                    <div class="skill-tags">
-                        <span>Arduino</span>
-                        <span>ESP32</span>
-                        <span>Embedded C</span>
-                    </div>
-                </article>
-
-
-                <article class="skill-card">
-                    <span class="skill-icon">💻</span>
-                    <h3>Programming</h3>
-                    <p>Programming fundamentals and application development.</p>
-
-                    <div class="skill-tags">
-                        <span>Java</span>
-                        <span>Python</span>
-                        <span>C</span>
-                    </div>
-                </article>
-
-
-                <article class="skill-card">
-                    <span class="skill-icon">🌐</span>
-                    <h3>Web Development</h3>
-                    <p>Building responsive and interactive web interfaces.</p>
-
-                    <div class="skill-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                </article>
-
-
-                <article class="skill-card">
-                    <span class="skill-icon">📊</span>
-                    <h3>Data Analytics</h3>
-                    <p>Data analysis, reporting and dashboard development.</p>
-
-                    <div class="skill-tags">
-                        <span>Power BI</span>
-                        <span>Excel</span>
-                        <span>SQL</span>
-                    </div>
-                </article>
-
-
-                <article class="skill-card">
-                    <span class="skill-icon">🤖</span>
-                    <h3>Generative AI</h3>
-                    <p>Exploring AI tools and intelligent applications.</p>
-
-                    <div class="skill-tags">
-                        <span>LLMs</span>
-                        <span>AI Tools</span>
-                        <span>Prompting</span>
-                    </div>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROJECTS -->
-        <section class="content-section projects" id="projects">
-
-            <p class="section-label">MY WORK</p>
-
-            <h2>Featured <span>Projects</span></h2>
-
-            <p class="section-description">
-                A selection of engineering and development work.
-                Visual concepts and planned projects are clearly identified.
-            </p>
-
-            <div class="project-grid">
-
-
-                <!-- PROJECT 01 -->
-                <article class="project-card">
-
-                    <div class="project-top">
-                        <span class="project-icon">🛡️</span>
-                        <span class="project-index">01</span>
-                    </div>
-
-                    <h3>
-                        AI & IoT-Based Enemy Tank Detection and Protection System
-                    </h3>
-
-                    <p>
-                        Final-year engineering project exploring intelligent
-                        detection and protection using Raspberry Pi 4B,
-                        AI concepts and IoT technology.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Raspberry Pi</span>
-                        <span>AI</span>
-                        <span>IoT</span>
-                    </div>
-
-                    <div class="project-footer">
-                        <span>Final-Year Project</span>
-                        <span>↗</span>
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 02 -->
-                <article class="project-card">
-
-                    <div class="project-top">
-                        <span class="project-icon">🌐</span>
-                        <span class="project-index">02</span>
-                    </div>
-
-                    <h3>Personal Portfolio Website</h3>
-
-                    <p>
-                        A responsive portfolio website presenting my
-                        professional profile, technical skills,
-                        projects and contact information.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <div class="project-footer">
-                        <span>Web Development</span>
-                        <span>↗</span>
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 03 -->
-                <article class="project-card">
-
-                    <div class="project-image">
-                        <img src="sales_analytics_dashboard_concept.png"
-                            alt="Sales Analytics Dashboard"
-                            style="width:100%;height:180px;object-fit:cover;border-radius:12px;">
-                    </div>
-
-                    <div class="project-top">
-                        <span class="project-icon">📈</span>
-                        <span class="project-index">03</span>
-                    </div>
-
-                    <h3>Sales Analytics Dashboard</h3>
-
-                    <p>
-                        A dashboard visual concept illustrating sales
-                        performance, revenue trends, product categories
-                        and business metrics.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Power BI</span>
-                        <span>Excel</span>
-                        <span>SQL</span>
-                    </div>
-
-                    <div class="project-footer">
-                        <span>Visual Concept</span>
-                        <span>↗</span>
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 04 -->
-                <article class="project-card">
-
-                    <div class="project-image">
-                        <img src="ecommerce_sales_dashboard.png"
-                            alt="E-commerce Sales Dashboard"
-                            style="width:100%;height:180px;object-fit:cover;border-radius:12px;">
-                    </div>
-
-                    <div class="project-top">
-                        <span class="project-icon">🛒</span>
-                        <span class="project-index">04</span>
-                    </div>
-
-                    <h3>E-commerce Sales Analysis</h3>
-
-                    <p>
-                        A visual dashboard concept showing e-commerce sales,
-                        profit, product performance, category trends
-                        and regional insights.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Power BI</span>
-                        <span>Data Analysis</span>
-                    </div>
-
-                    <div class="project-footer">
-                        <span>Visual Concept</span>
-                        <span>↗</span>
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 05 -->
-                <article class="project-card">
-
-                    <div class="project-image">
-                        <img src="student_performance_dashboard.png"
-                            alt="Student Performance Dashboard"
-                            style="width:100%;height:180px;object-fit:cover;border-radius:12px;">
-                    </div>
-
-                    <div class="project-top">
-                        <span class="project-icon">🎓</span>
-                        <span class="project-index">05</span>
-                    </div>
-
-                    <h3>Student Performance Analysis</h3>
-
-                    <p>
-                        A dashboard visual concept presenting student scores,
-                        subject-wise performance, pass percentage
-                        and class comparisons.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Data Analysis</span>
-                        <span>Visualization</span>
-                    </div>
-
-                    <div class="project-footer">
-                        <span>Visual Concept</span>
-                        <span>↗</span>
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 06 -->
-                <article class="project-card">
-
-                    <div class="project-top">
-                        <span class="project-icon">💼</span>
-                        <span class="project-index">06</span>
-                    </div>
-
-                    <h3>Employee Management System</h3>
-
-                    <p>
-                        A planned web application concept for organizing
-                        employee records, department information
-                        and administrative data.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>MySQL</span>
-                    </div>
-
-                    <div class="project-footer">
-                        <span>Project Concept</span>
-                        <span>↗</span>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- EDUCATION -->
-        <section class="content-section" id="education">
-
-            <p class="section-label">MY ACADEMIC JOURNEY</p>
-
-            <h2>Education</h2>
-
-            <div class="project-grid">
-
-                <article class="project-card">
-                    <span class="project-icon">🎓</span>
-                    <h3>Bachelor of Engineering</h3>
-                    <p>Electronics and Telecommunication Engineering</p>
-                    <p>Savitribai Phule Pune University</p>
-
-                    <div class="project-tags">
-                        <span>2026</span>
-                        <span>7.53 CGPA</span>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <span class="project-icon">📘</span>
-                    <h3>Diploma</h3>
-                    <p>Government Polytechnic Karad</p>
-
-                    <div class="project-tags">
-                        <span>80%</span>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <span class="project-icon">🏫</span>
-                    <h3>SSC</h3>
-                    <p>Bharatmata English Medium School, Mayani</p>
-
-                    <div class="project-tags">
-                        <span>92.80%</span>
-                    </div>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- EXPERIENCE -->
-        <section class="content-section" id="experience">
-
-            <p class="section-label">PROFESSIONAL EXPERIENCE</p>
-
-            <h2>Internship Experience</h2>
-
-            <div class="project-grid">
-
-                <article class="project-card">
-
-                    <span class="project-icon">🔧</span>
-
-                    <h3>PCB Designing Internship</h3>
-
-                    <p>Logistics Pvt. Ltd., Satara</p>
-
-                    <p>
-                        45-day internship involving PCB design concepts,
-                        electronic circuits and practical exposure
-                        to electronics design.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>PCB Design</span>
-                        <span>Electronics</span>
-                    </div>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <span class="project-icon">📊</span>
-
-                    <h3>Power BI & Cloud Computing Internship</h3>
-
-                    <p>January 2025 – February 2025</p>
-
-                    <p>
-                        Internship exposure to dashboard development,
-                        data visualization, analysis and Microsoft Azure
-                        fundamentals.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Power BI</span>
-                        <span>Cloud Computing</span>
-                        <span>Azure</span>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- CERTIFICATIONS -->
-        <section class="content-section" id="certifications">
-
-            <p class="section-label">LEARNING & DEVELOPMENT</p>
-
-            <h2>Certifications & Achievements</h2>
-
-            <div class="project-grid">
-
-                <article class="project-card">
-
-                    <span class="project-icon">☁️</span>
-
-                    <h3>Microsoft Azure Fundamentals</h3>
-
-                    <p>
-                        Achievement related to Microsoft Azure fundamentals
-                        and cloud computing concepts.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Microsoft Azure</span>
-                        <span>Cloud</span>
-                    </div>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <span class="project-icon">📡</span>
-
-                    <h3>Technical Research Paper</h3>
-
-                    <p>
-                        AI and IoT Based Enemy Tank Detection
-                        and Protection System.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>AI</span>
-                        <span>IoT</span>
-                        <span>Research</span>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROFESSIONAL PROFILES -->
-        <section class="content-section" id="profiles">
-
-            <p class="section-label">FIND ME ONLINE</p>
-
-            <h2>Professional Profiles</h2>
-
-            <p class="section-description">
-                Explore my professional profile, coding work and projects.
-            </p>
-
-            <div class="contact-buttons">
-
-                <a href="https://github.com/kunal-mane"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-btn">
-                    GitHub Profile ↗
-                </a>
-
-                <a href="https://www.linkedin.com/in/kunal-mane/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-btn">
-                    LinkedIn Profile ↗
-                </a>
-
-                <a href="KUNAL_MANE_RESUME"
-                    download
-                    class="contact-btn">
-                    Download My Resume ↓
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- RESUME VOICE ASSISTANT -->
-        <section class="content-section" id="resume-assistant">
-
-            <p class="section-label">INTERACTIVE EXPERIENCE</p>
-
-            <h2>Meet My Resume Assistant 🤖</h2>
-
-            <p class="section-description">
-                Listen to a short introduction about my education,
-                technical interests and professional background.
-            </p>
-
-            <div class="project-card"
-                style="max-width:550px;margin:auto;text-align:center;">
-
-                <div class="project-icon">🎙️</div>
-
-                <h3>Resume Voice Assistant</h3>
-
-                <p id="assistantMessage" aria-live="polite">
-                    Hello! I am Kunal's portfolio assistant.
-                    Click below to hear his introduction.
-                </p>
-
-                <br>
-
-                <button class="primary-button"
-                    type="button"
-                    onclick="startResumeAssistant()">
-                    ▶ Start Introduction
-                </button>
-
-                <button class="secondary-button"
-                    type="button"
-                    onclick="stopResumeAssistant()">
-                    ⏹ Stop
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT FORM -->
-        <section class="content-section" id="message">
-
-            <p class="section-label">LET'S TALK</p>
-
-            <h2>Send Me a Message</h2>
-
-            <p class="section-description">
-                Have an opportunity or project in mind?
-                Send me an email.
-            </p>
-
-            <form action="mailto:kunalmane946@gmail.com"
-                method="post"
-                enctype="text/plain"
-                style="max-width:550px;margin:auto;text-align:left;">
-
-                <label for="visitorName">Your Name</label>
-
-                <input type="text"
-                    id="visitorName"
-                    name="Name"
-                    placeholder="Enter your name"
-                    required
-                    style="width:100%;padding:14px;margin:10px 0 20px;
-                    background:#15233a;color:white;border:1px solid #29415e;
-                    border-radius:8px;">
-
-                <label for="visitorEmail">Your Email</label>
-
-                <input type="email"
-                    id="visitorEmail"
-                    name="Email"
-                    placeholder="Enter your email"
-                    required
-                    style="width:100%;padding:14px;margin:10px 0 20px;
-                    background:#15233a;color:white;border:1px solid #29415e;
-                    border-radius:8px;">
-
-                <label for="visitorMessage">Your Message</label>
-
-                <textarea id="visitorMessage"
-                    name="Message"
-                    rows="5"
-                    placeholder="Write your message..."
-                    required
-                    style="width:100%;padding:14px;margin:10px 0 20px;
-                    background:#15233a;color:white;border:1px solid #29415e;
-                    border-radius:8px;resize:vertical;"></textarea>
-
-                <button type="submit" class="primary-button">
-                    Send Message ↗
-                </button>
-
-            </form>
-
-        </section>
-
-
-        <!-- CONTACT DETAILS -->
-        <section class="content-section contact-section" id="contact">
-
-            <p class="section-label">GET IN TOUCH</p>
-
-            <h2>Let's Build Something Together.</h2>
-
-            <p class="section-description">
-                Interested in connecting about technology, projects
-                or professional opportunities? Feel free to reach out.
-            </p>
-
-            <div class="contact-buttons">
-
-                <a href="tel:+919503985325" class="contact-btn">
-                    📞 Call Me: +91 95039 85325
-                </a>
-
-                <a href="https://wa.me/919503985325"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-btn">
-                    💬 WhatsApp Me
-                </a>
-
-                <a href="mailto:kunalmane946@gmail.com"
-                    class="contact-btn">
-                    Email Me ↗
-                </a>
-
-                <a href="https://www.linkedin.com/in/kunal-mane/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-btn">
-                    LinkedIn ↗
-                </a>
-
-                <a href="https://github.com/kunal-mane"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-btn">
-                    GitHub ↗
-                </a>
-
-                <button type="button"
-                    class="contact-btn"
-                    id="copyEmailBtn">
-                    Copy Email 📋
-                </button>
-
-            </div>
-
-            <p id="copyStatus"
-                class="voice-status"
-                aria-live="polite"></p>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <p>© 2026 Kunal Mane. All Rights Reserved.</p>
-
-        <a href="#home">Back to top ↑</a>
-
-    </footer>
-
-
-    <script src="script.js"></script>
+        <button class="secondary-button" type="button"
+                onclick="stopResumeAssistant()">
+            ⏹ Stop
+        </button>
+    </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="content-section" id="message">
+    <p class="section-label">LET'S TALK</p>
+    <h2>Send Me a Message</h2>
+
+    <p class="section-description">
+        Have an opportunity or project in mind? Send me an email.
+    </p>
+
+    <form action="mailto:kunalmane946@gmail.com"
+          method="post" enctype="text/plain"
+          style="max-width:550px;margin:auto;text-align:left;">
+
+        <label for="visitorName">Your Name</label>
+        <input type="text" id="visitorName" name="Name"
+               placeholder="Enter your name" required
+               style="width:100%;padding:14px;margin:10px 0 20px;">
+
+        <label for="visitorEmail">Your Email</label>
+        <input type="email" id="visitorEmail" name="Email"
+               placeholder="Enter your email" required
+               style="width:100%;padding:14px;margin:10px 0 20px;">
+
+        <label for="visitorMessage">Your Message</label>
+        <textarea id="visitorMessage" name="Message" rows="5"
+                  placeholder="Write your message..." required
+                  style="width:100%;padding:14px;margin:10px 0 20px;"></textarea>
+
+        <button type="submit" class="primary-button">
+            Send Message ↗
+        </button>
+    </form>
+</section>
+
+<!-- CONTACT DETAILS -->
+<section class="content-section contact-section" id="contact">
+    <p class="section-label">GET IN TOUCH</p>
+    <h2>Let's Build Something Together.</h2>
+
+    <p class="section-description">
+        Feel free to contact me about technology, projects
+        and professional opportunities.
+    </p>
+
+    <div class="contact-buttons">
+
+        <a href="tel:+919503985325" class="contact-btn">
+            📞 +91 95039 85325
+        </a>
+
+        <a href="https://wa.me/919503985325"
+           target="_blank" rel="noopener noreferrer" class="contact-btn">
+            WhatsApp Me ↗
+        </a>
+
+        <a href="mailto:kunalmane946@gmail.com" class="contact-btn">
+            Email Me ↗
+        </a>
+
+        <a href="https://www.linkedin.com/in/kunal-mane-1ba1a9321/"
+           target="_blank" rel="noopener noreferrer" class="contact-btn">
+            LinkedIn ↗
+        </a>
+
+        <a href="https://github.com/manekunal986-create"
+           target="_blank" rel="noopener noreferrer" class="contact-btn">
+            GitHub ↗
+        </a>
+
+        <button type="button" class="contact-btn" id="copyEmailBtn">
+            Copy Email 📋
+        </button>
+
+    </div>
+
+    <p id="copyStatus" class="voice-status" aria-live="polite"></p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Kunal Mane. All Rights Reserved.</p>
+    <a href="#home">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
